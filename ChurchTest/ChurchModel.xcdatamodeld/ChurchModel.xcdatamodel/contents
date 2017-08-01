@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<model type="com.apple.IDECoreDataModeler.DataModel" documentVersion="1.0" lastSavedToolsVersion="12141" systemVersion="16G29" minimumToolsVersion="Automatic" sourceLanguage="Swift" userDefinedModelVersionIdentifier="">
+    <entity name="Individual" representedClassName="Individual" syncable="YES">
+        <attribute name="affiliation" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="birthDate" optional="YES" attributeType="Date" usesScalarValueType="NO" syncable="YES"/>
+        <attribute name="firstName" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="forceSensitive" optional="YES" attributeType="Boolean" usesScalarValueType="YES" syncable="YES"/>
+        <attribute name="lastName" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="profileURL" optional="YES" attributeType="String" syncable="YES"/>
+        <relationship name="image" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="ProfilePictures" inverseName="individual" inverseEntity="ProfilePictures" syncable="YES"/>
+    </entity>
+    <entity name="ProfilePictures" representedClassName="ProfilePictures" syncable="YES">
+        <attribute name="image" optional="YES" attributeType="Binary" syncable="YES"/>
+        <relationship name="individual" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="Individual" inverseName="image" inverseEntity="Individual" syncable="YES"/>
+    </entity>
+    <elements>
+        <element name="Individual" positionX="-63" positionY="-18" width="128" height="150"/>
+        <element name="ProfilePictures" positionX="-54" positionY="36" width="128" height="75"/>
+    </elements>
+</model>
